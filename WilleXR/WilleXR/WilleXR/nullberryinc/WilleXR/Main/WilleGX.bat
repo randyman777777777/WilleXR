@@ -117,8 +117,9 @@ timeout /t 2 >nul
 cls
 goto :a
 :choice1
-start kalis
+start "" "D:\VirtualBox VMs\Kali-Linux-2021.4-virtualbox-amd64\Kali-Linux-2021.4-virtualbox-amd64"
 timeout /t 5 >nul
+cls
 start "" "C:\Users\%username%\VirtualBox VMs\Kali-Linux-2021.4-virtualbox-amd64\Kali-Linux-2021.4-virtualbox-amd64"
 CD C:\Users\%username%\VirtualBox VMs
 tree
@@ -143,7 +144,17 @@ cls
 goto :a
 
 :choicel
-start ba.bat
+start n
+@ipconfig/all | find "Subnet Mask"
+@ipconfig/all | find "IPv4" 
+@ipconfig/all | find "Default Gateway"
+@ipconfig/all | find "Host Name"
+@ipconfig/all | find "DNS Suffix Search List"
+@ipconfig/all | find "Physical Address"
+@ipconfig/all | find "DHCP Enabled"
+@ipconfig/all | find "DHCP Server"
+@ping 127.0.0.1
+pause
 cls
 goto :a
 
@@ -203,7 +214,7 @@ goto :a
 color 05
 start tors
 timeout /t 5 >nul
-pause
+cls
 start C:\Users\%username%\Desktop\Tor Browser\Browser\firefox.exe
 timeout /t 2 >nul
 start C:\Users\%username%\Downloads\Tor Browser\Browser\firefox.exe
@@ -289,6 +300,7 @@ echo type CD to change directory
 echo type exit to return to WilleXR
 echo type help to display the full list of commands and their uses
 CMD
+color 04
 goto :a
 
 :choiceg
@@ -355,8 +367,6 @@ goto :a
 
 :choicey
 color 05
-start pidgns
-timeout /t 5 >nul
 start "" "C:\Program Files (x86)\Pidgin\pidgin"
 CD C:\Program Files (x86)\Pidgin
 tree

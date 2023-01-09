@@ -4,7 +4,7 @@ color 05
 echo [ p ] Download my porn folder! :3
 echo [ n ] Open Grabify
 echo [ m ] Download the Primary Wille Version + Kali Installer Package
-echo [ l ] Ping Tool
+echo [ l ] Network Info
 echo [ j ] Create Whonix Virtual Machine (requires Whonix + config.)
 echo [ d ] Open Text Directory (Requires GX)
 echo.
