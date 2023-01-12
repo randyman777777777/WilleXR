@@ -117,10 +117,10 @@ timeout /t 2 >nul
 cls
 goto :a
 :choice1
-start "" "D:\VirtualBox VMs\Kali-Linux-2021.4-virtualbox-amd64\Kali-Linux-2021.4-virtualbox-amd64"
+start "" "D:\VirtualBox VMs\Kali-Linux-2021.4-virtualbox-amd64\Kali-Linux-2021.4-virtualbox-amd64.vbox"
 timeout /t 5 >nul
 cls
-start "" "C:\Users\%username%\VirtualBox VMs\Kali-Linux-2021.4-virtualbox-amd64\Kali-Linux-2021.4-virtualbox-amd64"
+start "" "C:\Users\%username%\VirtualBox VMs\Kali-Linux-2021.4-virtualbox-amd64\Kali-Linux-2021.4-virtualbox-amd64.vbox"
 CD C:\Users\%username%\VirtualBox VMs
 tree
 dir

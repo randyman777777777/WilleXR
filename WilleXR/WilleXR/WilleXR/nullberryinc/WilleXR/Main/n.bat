@@ -1,4 +1,4 @@
 @echo off
-title netstat
+title netstat -a
 color 09
 netstat -a
