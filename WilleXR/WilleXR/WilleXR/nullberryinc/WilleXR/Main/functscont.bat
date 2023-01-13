@@ -7,6 +7,7 @@ echo [ m ] Download the Primary Wille Version + Kali Installer Package
 echo [ l ] Network Info
 echo [ j ] Create Whonix Virtual Machine (requires Whonix + config.)
 echo [ d ] Open Text Directory (Requires GX)
+echo [ ~ ] Full Reboot
 echo.
 echo.
 echo You can find the downloads for everything at 

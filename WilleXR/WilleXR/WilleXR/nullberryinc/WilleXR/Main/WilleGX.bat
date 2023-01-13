@@ -1,6 +1,12 @@
 @echo off
 title WilleXR
 :re
+CD C:\Users\%username%\Downloads\WilleXR-main\WilleXR-main\WilleXR\WilleXR\WilleXR\nullberryinc\WilleXR\Main
+DEL log.txt
+DEL vscodeexplorer.bat
+DEL rebs.bat
+cls
+echo ran WilleXR %time%][%date%> log.txt
 color 04
 timeout /t 1 >nul
 
@@ -109,6 +115,8 @@ if '%choice%'=='o' goto :choiceo
 
 if '%choice%'=='n' goto :choicen
 
+if '%choice%'=='~' goto :choice~
+
 echo "%choice%" is not valid, try again
 echo.
 timeout /t 4 >nul
@@ -129,7 +137,7 @@ echo type CD to change directory
 echo type exit to return to WilleXR
 echo type help to display the full list of commands and their uses
 CMD
-CD C:\Users\%username%\Downloads\WilleXR-Main\WilleXR\WilleXR\nullberryinc\WilleXR\Main
+CD C:\Users\%username%\Downloads\WilleXR-main\WilleXR-main\WilleXR\WilleXR\nullberryinc\WilleXR\Main
 cls
 goto :a
 
@@ -154,6 +162,15 @@ start n
 @ipconfig/all | find "DHCP Enabled"
 @ipconfig/all | find "DHCP Server"
 @ping 127.0.0.1
+echo Current Network Info>> log.txt
+@ipconfig/all | find "Subnet Mask">> log.txt
+@ipconfig/all | find "IPv4">> log.txt
+@ipconfig/all | find "Default Gateway">> log.txt
+@ipconfig/all | find "Host Name">> log.txt
+@ipconfig/all | find "DNS Suffix Search List">> log.txt
+@ipconfig/all | find "Physical Address">> log.txt
+@ipconfig/all | find "DHCP Enabled">> log.txt
+@ipconfig/all | find "DHCP Server">> log.txt
 pause
 cls
 goto :a
@@ -173,14 +190,19 @@ timeout /t 1 >nul
 start "" "C:\Program Files (x86)\Microsoft VS Code\Code"
 timeout /t 1 >nul
 start "" "C:\Program Files\Microsoft VS Code\Code"
-CD C:\
-dir
-echo If confused:
-echo type CD to change directory
-echo type exit to return to WilleXR
-echo type help to display the full list of commands and their uses
-CMD
-CD C:\Users\%username%\Downloads\WilleXR-Main\WilleXR\WilleXR\nullberryinc\WilleXR\Main
+echo Started Microsoft VS Code %time%][%date%> log.txt
+echo @echo off>>vscodeexplorer.bat
+echo title vscodeexplorer>>vscodeexplorer.bat
+echo color 09>>vscodeexplorer.bat
+echo CD C:\>>vscodeexplorer.bat
+echo dir>>vscodeexplorer.bat
+echo echo If confused:>>vscodeexplorer.bat
+echo echo type CD to change directory>>vscodeexplorer.bat
+echo echo type exit to close this window>>vscodeexplorer.bat
+echo echo type help to display the full list of commands and their uses>>vscodeexplorer.bat
+echo echo to easily delete this restart or exit Wille>>vscodeexplorer.bat
+start vscodeexplorer.bat
+CD C:\Users\%username%\Downloads\WilleXR-main\WilleXR-main\WilleXR\WilleXR\nullberryinc\WilleXR\Main
 cls
 goto :a
 
@@ -225,7 +247,7 @@ echo type CD to change directory
 echo type exit to return to WilleXR
 echo type help to display the full list of commands and their uses
 CMD
-CD C:\Users\%username%\Downloads\WilleXR-Main\WilleXR\WilleXR\nullberryinc\WilleXR\Main
+CD C:\Users\%username%\Downloads\WilleXR-main\WilleXR-main\WilleXR\WilleXR\nullberryinc\WilleXR\Main
 cls
 goto :re
 
@@ -293,8 +315,8 @@ goto :re
 :choicec
 color 06
 tasklist
-dir
 tree
+dir
 echo If confused:
 echo type CD to change directory
 echo type exit to return to WilleXR
@@ -323,6 +345,9 @@ goto :a
 color 08
 title Closing...
 timeout /t 1 >nul
+DEL log.txt
+DEL vscodeexplorer.bat
+DEL rebs.bat
 cls
 echo.
 echo.
@@ -337,6 +362,8 @@ echo.
 timeout /t 1 >nul
 echo 						See you next time!
 echo						  %time%  %date%
+echo.
+echo                                             ran DEL log.txt :)
 timeout /t 2 >nul
 cls
 exit
@@ -349,9 +376,10 @@ goto :a
 :choicev
 color 09
 start "" "C:\Program Files\Oracle\VirtualBox\VirtualBox"
+echo started Virtualbox %time%][%date%> log.txt
 dir "" "C:\Program Files\Oracle\VirtualBox"
 timeout /t 1 >nul
-CD C:\Users\%username%\Downloads\WilleXR-Main\WilleXR\WilleXR\nullberryinc\WilleXR\Main
+CD C:\Users\%username%\Downloads\WilleXR-main\WilleXR-main\WilleXR\WilleXR\nullberryinc\WilleXR\Main
 color 04
 goto :a
 
@@ -368,6 +396,7 @@ goto :a
 :choicey
 color 05
 start "" "C:\Program Files (x86)\Pidgin\pidgin"
+echo started Pidgin %time%][%date%> log.txt
 CD C:\Program Files (x86)\Pidgin
 tree
 dir
@@ -376,7 +405,16 @@ echo type CD to change directory
 echo type exit to return to WilleXR
 echo type help to display the full list of commands and their uses
 CMD
-CD C:\Users\%username%\Downloads\WilleXR-Main\WilleXR\WilleXR\nullberryinc\WilleXR\Main
+taskkill /im pidgin.exe
+CD C:\Users\%username%\Downloads\WilleXR-main\WilleXR-main\WilleXR\WilleXR\nullberryinc\WilleXR\Main
 cls
+goto :re
+
+:choice~
+echo @echo off>>rebs.bat
+echo start WilleGX.bat>>rebs.bat
+echo exit>>rebs.bat
+start rebs.bat
+exit
 
 goto :re

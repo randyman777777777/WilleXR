@@ -15,6 +15,8 @@ ____              ___     ___ ___         ____      ___ ________
                                                                     
                                                                                                                                        
 Wille is a highly customizeable toolkit made to be lightweight.
+It's advised to run the Exit Wille function once done as it deletes all
+temporary files
 More useful tools coming soon when I'm smart
 This is the lightest weight and most functional version (XR) that is just
 a modified version of the previous (GX)
