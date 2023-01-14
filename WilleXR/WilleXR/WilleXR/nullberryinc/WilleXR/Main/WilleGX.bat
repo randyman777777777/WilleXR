@@ -252,14 +252,16 @@ cls
 goto :re
 
 :choiceb
-start braves
+CD C:\Program Files\BraveSoftware\Brave-Browser\Application
+start brave
 cls
-goto :a
+goto :re
 
 :choicew
-start wires
+CD C:\Program Files\Wireshark
+start Wireshark
 cls
-goto :a
+goto :re
 
 :choicer
 type README!.txt
